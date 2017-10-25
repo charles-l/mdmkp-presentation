@@ -80,3 +80,27 @@
 (slide #:title "Approach"
        (item "Initial population generation")
        (item "Binarized JAYA with repair"))
+
+(slide #:title "Initial population generation"
+       (item "Generate population of 200")
+       (item "Flip bits in a random sequence and check feasibility"))
+
+(slide #:title "Binarized JAYA"
+       (item "After each iteration, sort by best solution")
+       (item "Error/feasibility")
+       (item "Objective value"))
+
+(slide #:title "Binarized JAYA"
+       (tt "(1 1 0 1 0)")
+       (tt "(0 0 0 1 0)")
+       (tt "(1 0 0 0 1)")
+       'next
+       (scale (tt "r1 = 0 1 0 0 1") 2/5)
+       (scale (tt "r2 = 0 0 1 1 1") 2/5)
+       (tt "(1 1 0 1 0)")
+       (tt "(0 1 0 1 0)")
+       (tt "(1 0 0 0 1)"))
+
+(slide #:title "Conclusions"
+       (item "MDMKP problems can be addressed with metaheuristics")
+       (item "JAYA is a simple, parameterless, and efficient solution"))
