@@ -20,13 +20,13 @@
   #:title "Knapsack Problem"
   (item "A combinatorial optimization")
   (item "Some set of items, each item with a weight and value")
-  (item "Attempt to maximize value while staying within weight"))
+  (item "Attempt to maximize value while staying within weight")
+  (item "Demand"))
 
 (slide
   #:title "MDMKP"
   (item "Multidemand Multidimensional Knapsack Problem (MDMKP)")
-  (item "Knapsack problem with more dimensions")
-  (item "Demand constraints require minimum weight"))
+  (item "Knapsack problem with more dimensions"))
 
 (slide
   #:title "MDMKP"
@@ -34,7 +34,9 @@
   (hbl-append (t "Maximize ") ($ "\\displaystyle\\sum_{j=1}^{n} c_j x_j"))
   (t "Subject to the constraints:")
   ($$ "\\displaystyle\\sum_{j=1}^{n} a_{ij} x_{j} \\leq b_i, \\forall i \\in \\{1, ..., m\\}")
-  ($$ "\\displaystyle\\sum_{j=1}^{n} a_{ij} x_{j} \\geq b_i, \\forall i \\in \\{m + 1, ..., m + q\\}"))
+  ($$ "\\displaystyle\\sum_{j=1}^{n} a_{ij} x_{j} \\geq b_i, \\forall i \\in \\{m + 1, ..., m + q\\}")
+  (scale (t "Error is how much the solution goes past the bounds") 3/4)
+  (scale (t "Feasible when error is 0") 3/4))
 
 (slide #:title "Practical applications"
        (item "Portfolio selection")
@@ -88,7 +90,13 @@
        (tt "(1 0 0 0 1)"))
 
 (slide #:title "Repair"
-       (t "After each iteration of JAYA repair to improve feasibility")
+       (t "After each iteration of JAYA repair to improve feasibility,")
+       (t "rather than relying on strict penalty")
+       (item "Flip every bit in solution"
+             (item "If feasible, keep and use as new solution"))
+       (item "Works with JAYA to improve population"))
+
+(slide #:title "Repair"
        (scale ($$ "obj = 10 x_1 + 20 x_2 + 30 x_3 + 40 x_4 + 50 x_5 + 60 x_6 + 70 x_7 + 80 x_8 ") 4/5)
        (scale ($$ " 5 x_1 +  20 x_2 +  25 x_3 +  35 x_4 + 40 x_5 + 45 x_6 + 55 x_7 +  60 x_8 \\leq 150") 4/5)
        (scale ($$ "90 x_1 + 120 x_2 +  70 x_3 + 110 x_4 + 90 x_5 + 65 x_6 + 80 x_7 + 150 x_8 \\leq 300") 4/5)
@@ -110,6 +118,9 @@
              (item "800/810 feasible")))
 
 (slide #:title "Conclusions"
-       (item "MDMKP problems can be addressed with metaheuristics")
+       (item "MDMKP can be addressed with metaheuristics")
        (item "JAYA is a simple, parameterless, and efficient solution")
        (item "Results are massively improved with repair"))
+
+(slide #:title "Thanks!"
+       (scale (t "Any questions?") 3/4))
