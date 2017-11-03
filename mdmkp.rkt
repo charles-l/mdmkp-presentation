@@ -83,6 +83,7 @@
        (tt "(0 0 0 1 0)")
        (tt "(1 0 0 0 1)")
        'next
+       (tt "---")
        (tt "(1 1 0 1 0)")
        (tt "(0 1 0 1 0)")
        (tt "(1 0 0 0 1)"))
@@ -118,7 +119,7 @@
 (slide #:title "Results"
        (item "For first 90 problems")
        (item "100 variables")
-       (item "5 demand constraints")
+       (item "5 dimensional constraints")
        (item "1, 2, and 5 demand constraints")
        (item "2.1% deviation from optimal"))
 
