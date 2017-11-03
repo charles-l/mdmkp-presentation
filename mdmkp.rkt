@@ -83,8 +83,6 @@
        (tt "(0 0 0 1 0)")
        (tt "(1 0 0 0 1)")
        'next
-       (scale (tt "r1 = 0 1 0 0 1") 2/5)
-       (scale (tt "r2 = 0 0 1 1 1") 2/5)
        (tt "(1 1 0 1 0)")
        (tt "(0 1 0 1 0)")
        (tt "(1 0 0 0 1)"))
@@ -116,6 +114,13 @@
        (item "JAYA with repair"
              (item "Average objective 83683")
              (item "800/810 feasible")))
+
+(slide #:title "Results"
+       (item "For first 90 problems")
+       (item "100 variables")
+       (item "5 demand constraints")
+       (item "1, 2, and 5 demand constraints")
+       (item "2.1% deviation from optimal"))
 
 (slide #:title "Conclusions"
        (item "MDMKP can be addressed with metaheuristics")
